@@ -7,18 +7,17 @@ import ProductPage from './landing_page/products/ProductPage'
 import Signup from './landing_page/signup/Signup'
 import Support from './landing_page/support/Support'
 
-
 // import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <div>
     <HomePage/>
-    <AboutPage/>
+    {/* <AboutPage/>
     <PricePage/>
     <ProductPage/>
     <Signup/>
-    <Support/>
+    <Support/> */}
     </div>
   </React.StrictMode>,
 )
