@@ -8,12 +8,12 @@ import Hero from './Hero';
 function ProductPage() {
     return ( 
         <>
-        <Navbar/>
+    
         <LeftSection/>
         <RightPage/>
         <Hero/>
         <Universe/>
-        <Footer/>
+        
         </>
      );
 }
