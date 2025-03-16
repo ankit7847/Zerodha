@@ -6,10 +6,9 @@ import Hero from './Hero';
 function ProductPage() {
     return ( 
         <>
-    
+        <Hero/>
         <LeftSection/>
         <RightPage/>
-        <Hero/>
         <Universe/>
         
         </>
