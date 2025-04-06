@@ -4,7 +4,7 @@ import Brokerage from './Brokerage';
 
 
 
-function PricePage() {
+function PricingPage() {
     return ( 
         <>
        
@@ -17,4 +17,4 @@ function PricePage() {
      );
 }
 
-export default PricePage;
+export default PricingPage;
