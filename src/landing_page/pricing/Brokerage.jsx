@@ -21,7 +21,7 @@ import React from 'react';
             </div>
             <div className="col-4 p-5">
                <h4 className='' style={{color:"#387ed1"}}> List of charges</h4>
-               no change 
+               
             </div>
         </div>
        </div>
