@@ -4,12 +4,12 @@ import Brokerage from './Brokerage';
 
 
 
-function PricePage() {
+function PricingPage() {
     return ( 
         <>
-       
-         <Brokerage/>
          <Hero/>
+         <Brokerage/>
+       
         
          
         </>
@@ -17,4 +17,4 @@ function PricePage() {
      );
 }
 
-export default PricePage;
+export default PricingPage;

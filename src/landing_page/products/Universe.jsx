@@ -38,7 +38,6 @@ function Universe() {
                 <button className='p-2 btn btn-primary fs-5' 
                     style={{ width: "20%", margin: "0 auto", marginTop: "-20px" }}>
                     Sign up for free
-                    no CHANGE TODAY
                 </button>
             </div>
         </div>
