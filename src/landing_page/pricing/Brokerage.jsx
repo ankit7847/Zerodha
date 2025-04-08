@@ -18,7 +18,9 @@ import React from 'react';
                     </li>
                     <li>If the account is in debit balance, any order placed will be charged 240 per executed order instead of 220 per executed order</li>
                 </ul>
+                <H1>NO CHANGE</H1>
             </div>
+            
             <div className="col-4 p-5">
                <h4 className='' style={{color:"#387ed1"}}> List of charges</h4>
                
