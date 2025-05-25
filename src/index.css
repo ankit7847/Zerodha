@@ -70,4 +70,13 @@ button:focus-visible {
 .nav-link{ 
   margin-left: 40px;
 }
+.supportHero{ 
+  background-color: rgb(40, 74, 74); 
+  color: white;
 
+}
+.supportwrapper{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 150px;
+}
