@@ -70,13 +70,30 @@ button:focus-visible {
 .nav-link{ 
   margin-left: 40px;
 }
-.supportHero{ 
-  background-color: rgb(40, 74, 74); 
+#supportHero{ 
+  background-color:rgb(56, 126, 209); 
   color: white;
 
 }
-.supportwrapper{
+#supportwrapper{
   display: flex;
   justify-content: space-between;
   margin: 0 150px;
+}
+ #supportwrapper a{
+  color: white;
+}
+#supportHero a {
+  color: white;
+  margin-left: 20px;
+}
+
+#supportHero input{
+  padding: 15px 50px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+#FeaturedSection li{
+  line-height: 20px;
 }
