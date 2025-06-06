@@ -3,7 +3,7 @@ import React from 'react';
 function Hero() {
     return ( 
         <section className="container-fluid  " id="supportHero">
-            <div className="p-3 m-3" id="supportwrapper">
+            <div className="p-3 " id="supportwrapper">
                 <h3>Support Portal</h3>
                 <a href="">Track Ticket</a>
             </div>
@@ -24,6 +24,7 @@ function Hero() {
                     <ol>
                         <a href=""><li>Latest Intraday leverages and Square-off timings</li></a>
                        <a href=""> <li>Offer for sale (OFS) – May 2025</li></a>
+                       
                     </ol>
                 </div>
             </div>
