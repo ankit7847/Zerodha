@@ -1,5 +1,4 @@
 import React from 'react';
-
 function Hero() {
     return ( 
         <section className="container-fluid  " id="supportHero">
@@ -32,4 +31,4 @@ function Hero() {
      );
 }
 
-export default Hero;
+export default Hero; 
