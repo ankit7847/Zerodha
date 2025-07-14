@@ -12,7 +12,11 @@
     const [stockPrice, setStockPrice] = useState(0.0);
 
     const handleBuyClick = () => {
+<<<<<<< HEAD
       axios.post("http://localhost:3000/newOrder", {
+=======
+      axios.post("http://localhost:3002/newOrder", {
+>>>>>>> 23fa13c (fixing sell)
         name: uid,
         qty: stockQuantity,
         price: stockPrice,
