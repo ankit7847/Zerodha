@@ -6,20 +6,16 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
-<<<<<<< HEAD
-    axios.get("http://localhost:3002/addholdings") // ✅ Make sure your backend route is correct!
-=======
+
     axios.get("http://localhost:3002/allholdings") 
->>>>>>> 23fa13c (fixing sell)
+
+
       .then((res) => {
         setAllHoldings(res.data);
       })
       .catch((err) => console.error(err));
   }, []);
-<<<<<<< HEAD
-=======
- 
->>>>>>> 23fa13c (fixing sell)
+
 
   const labels = allHoldings.map((item) => item.name || "-");
 

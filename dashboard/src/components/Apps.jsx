@@ -5,7 +5,3 @@ const Apps = () => {
 };
 
 export default Apps;
-<<<<<<< HEAD
-=======
-  
->>>>>>> 23fa13c (fixing sell)
