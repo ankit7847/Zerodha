@@ -6,14 +6,12 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 
-<<<<<<< HEAD
 const PositionsOrder =require('./models/PositionsOrder');
 const { HoldingsModel } = require('./models/HoldingsModel');
-=======
+
 const {PositionsOrder } =require('./models/PositionsOrder');
 const { HoldingsModel } = require('./models/HoldingsModel');
 const {OrdersModel} =require('./models/OrdersModel');
->>>>>>> 23fa13c (fixing sell)
 
 
 const PORT = process.env.PORT || 3002;
@@ -68,8 +66,6 @@ app.use(bodyParser.json());
 
 // });
 
-<<<<<<< HEAD
-=======
 
 //  app.get("/addholdings", async (req, res) => {
 //    await HoldingsModel.insertMany([
@@ -200,19 +196,19 @@ app.use(bodyParser.json());
 //   .catch((err) => console.log(err));
 
 
->>>>>>> 23fa13c (fixing sell)
+
 app.get('/allholdings',async(req,res)=>{
   let allHoldings = await HoldingsModel.find({});
   res.json(allHoldings);
 });
 
-<<<<<<< HEAD
+
 app.get('/allpositions',async(req,res)=>{
   let allPositions = await PositionsOrder.find({});
   res.json(allPositions);
 });
 
-=======
+
 app.post('/newOrder',async(req,res)=>{
   let newOrder =new OrdersModel({
      name: req.body.name,
@@ -229,14 +225,14 @@ app.post('/newOrder',async(req,res)=>{
 //   res.json(allPositions);
 // });
 
->>>>>>> 23fa13c (fixing sell)
+
 app.listen(PORT,()=>{
     console.log("App started");
     mongoose.connect(url);
     console.log("DB is connected");
-<<<<<<< HEAD
-});
-=======
+
 });
 
->>>>>>> 23fa13c (fixing sell)
+
+
+
