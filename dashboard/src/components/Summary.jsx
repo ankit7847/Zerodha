@@ -1,10 +1,14 @@
 import React from "react";
 
 const Summary = () => {
+  // ✅ LocalStorage se username nikaal le
+  const username = localStorage.getItem("username");
+  console.log("✅ Summary username:", username); // ✅ Add karo
+
   return (
     <>
       <div className="username">
-        <h6>Hi, User!</h6>
+        <h6>Hi, {username || "User"}!</h6>
         <hr className="divider" />
       </div>
 

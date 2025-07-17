@@ -1,16 +1,21 @@
 import React, { useState } from "react";
-
 import { Link } from "react-router-dom";
 
 const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
 
+  // ✅ LocalStorage se naam aur userid lo
+  const username = localStorage.getItem("username");
+  console.log("✅ Menu username:", username);
+  const userid = localStorage.getItem("userid");
+  console.log("✅ Menu userid:", userid); // ✅ Add karo
+
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
   };
 
-  const handleProfileClick = (index) => {
+  const handleProfileClick = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
 
@@ -69,7 +74,7 @@ const Menu = () => {
           <li>
             <Link
               style={{ textDecoration: "none" }}
-              to="funds"
+              to="/funds"
               onClick={() => handleMenuClick(4)}
             >
               <p className={selectedMenu === 4 ? activeMenuClass : menuClass}>
@@ -91,8 +96,10 @@ const Menu = () => {
         </ul>
         <hr />
         <div className="profile" onClick={handleProfileClick}>
-          <div className="avatar">ZU</div>
-          <p className="username">USERID</p>
+          <div className="avatar">
+            {username ? username[0].toUpperCase() : "U"}
+          </div>
+          <p className="username">{userid || "USERID"}</p>
         </div>
       </div>
     </div>
@@ -100,3 +107,4 @@ const Menu = () => {
 };
 
 export default Menu;
+  

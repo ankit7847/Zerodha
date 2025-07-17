@@ -8,6 +8,8 @@ const {PositionsOrder } =require('./models/PositionsOrder');
 const { HoldingsModel } = require('./models/HoldingsModel');
 const {OrdersModel} =require('./models/OrdersModel');
 
+const authRoutes = require('./routes/auth');
+
 const PORT = process.env.PORT || 3002;
 const url = process.env.MONGO_URL;  
 
@@ -16,6 +18,8 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+
+app.use("/api/auth", authRoutes);
 
 // app.get('/addpositions',async(req,res)=>{
 //     let temppostions=[
@@ -213,18 +217,29 @@ app.post('/newOrder',async(req,res)=>{
   res.send("Order Saved");
 });
 
+
+
+
 // app.get('/addpositions',async(req,res)=>{
 //   let allPositions = await PositionsOrder.find({});
 //   res.json(allPositions);
 // });
 
 
-app.listen(PORT,()=>{
-    console.log("App started");
-    mongoose.connect(url);
-    console.log("DB is connected");
+// app.listen(PORT,()=>{
+//     console.log("App started");
+//     mongoose.connect(url);
+//     console.log("DB is connected");
 
-});
+// });
+
+mongoose
+  .connect(url)
+  .then(() => {
+    console.log("DB connected");
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+  })
+  .catch((err) => console.log(err));
 
 
 

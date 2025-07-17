@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
    <Navbar/>
   <Routes>
     <Route path='/' element={<HomePage/>} ></Route>
-    <Route path='/Signup' element={<Signup/>} ></Route>
+    <Route path='/signup' element={<Signup/>} ></Route>
     <Route path='/About' element={<AboutPage/>} ></Route>
     <Route path='/pricing' element={<PricingPage />} />
     <Route path='/Product' element={<ProductPage/>} ></Route>
