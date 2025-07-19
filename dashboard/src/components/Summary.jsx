@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Summary = () => {
-  // ✅ LocalStorage se username nikaal le
-  const username = localStorage.getItem("username");
-  console.log("✅ Summary username:", username); // ✅ Add karo
+  // ✅ LocalStorage se lene ke liye pehle state bana
+  const [username, setUsername] = useState("");
+
+  // ✅ useEffect se pehli baar jab component mount ho tab localStorage se lo
+  useEffect(() => {
+    const uname = localStorage.getItem("username");
+    console.log("✅ Summary username (useEffect):", uname);
+    setUsername(uname);
+  }, []); // empty dependency => bas ek baar chalega
 
   return (
     <>

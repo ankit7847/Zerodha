@@ -23,7 +23,8 @@ const Home = () => {
 
   const token = localStorage.getItem("token");
   if (!token) {
-    window.location.href = "http://localhost:3000/signup";
+    window.location.href = "http://localhost:3000/Signup";
+
   }
 }, []);
 

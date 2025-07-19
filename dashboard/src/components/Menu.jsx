@@ -1,15 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
 
-  // ✅ LocalStorage se naam aur userid lo
-  const username = localStorage.getItem("username");
-  console.log("✅ Menu username:", username);
-  const userid = localStorage.getItem("userid");
-  console.log("✅ Menu userid:", userid); // ✅ Add karo
+  // ✅ Yeh 2 states bana — pehle empty rakho
+  const [username, setUsername] = useState("");
+  const [userid, setUserid] = useState("");
+
+  // ✅ useEffect se localStorage padh aur state update kar
+  useEffect(() => {
+    const uname = localStorage.getItem("username");
+    const uid = localStorage.getItem("userid");
+
+    
+
+    setUsername(uname);
+    setUserid(uid);
+  }, []); // empty dependency => bas 1 baar chalega jab component mount hoga
 
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
@@ -18,6 +27,10 @@ const Menu = () => {
   const handleProfileClick = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
+
+  
+
+
 
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
@@ -99,7 +112,8 @@ const Menu = () => {
           <div className="avatar">
             {username ? username[0].toUpperCase() : "U"}
           </div>
-          <p className="username">{userid || "USERID"}</p>
+          <p className="username">{username || "USER"}</p>
+
         </div>
       </div>
     </div>
@@ -107,4 +121,3 @@ const Menu = () => {
 };
 
 export default Menu;
-  

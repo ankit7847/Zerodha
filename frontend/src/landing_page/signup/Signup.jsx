@@ -27,7 +27,9 @@ function Signup() {
 
     console.log("✅ Username Saved:", localStorage.getItem("username"));
 
-    window.location.href = `http://localhost:3000/?token=${res.data.token}&username=${res.data.username}&userid=${res.data._id}`;
+    window.location.href = `http://localhost:3000?token=${res.data.token}&username=${res.data.username}&userid=${res.data._id}`;
+
+
 
   } catch (err) {
     console.log("❌ Error:", err);
