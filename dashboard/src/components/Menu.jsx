@@ -1,36 +1,32 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; 
 
 const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
-  const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
-
-  // ✅ Yeh 2 states bana — pehle empty rakho
   const [username, setUsername] = useState("");
   const [userid, setUserid] = useState("");
 
-  // ✅ useEffect se localStorage padh aur state update kar
+  const navigate = useNavigate(); 
+
   useEffect(() => {
     const uname = localStorage.getItem("username");
     const uid = localStorage.getItem("userid");
-
-    
-
     setUsername(uname);
     setUserid(uid);
-  }, []); // empty dependency => bas 1 baar chalega jab component mount hoga
+  }, []);
 
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
   };
 
   const handleProfileClick = () => {
-    setIsProfileDropdownOpen(!isProfileDropdownOpen);
-  };
-
+  localStorage.removeItem("token");
+  localStorage.removeItem("username");
+  localStorage.removeItem("userid");
   
+  window.location.href = "http://localhost:5173";
 
-
+};
 
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
@@ -113,7 +109,6 @@ const Menu = () => {
             {username ? username[0].toUpperCase() : "U"}
           </div>
           <p className="username">{username || "USER"}</p>
-
         </div>
       </div>
     </div>

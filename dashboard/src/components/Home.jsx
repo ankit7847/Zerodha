@@ -28,6 +28,16 @@ const Home = () => {
   }
 }, []);
 
+// login 
+
+useEffect(() => {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    window.location.href = "/Signup";
+  }
+}, []);
+
+
 
 
   return (
