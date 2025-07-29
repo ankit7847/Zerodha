@@ -1,71 +1,103 @@
 import React from 'react';
 
 function CreateTicket() {
-    return (  
-        <div className='container'>
-        <div className="row p-4 mb-5 mt-5">
-            <h1 className='fs-2 p-4 mb-5 mt-5'>To create a ticket, select a relevant topic</h1>
-            <div className="col-4">
-                <h4 className=''> <i class="fa fa-plus-circle" aria-hidden="true">Account Opening</i> </h4>
-                <a  style={{textDecoration:"none", lineHeight:"2"}}  href="">Resident individual</a> <br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Minor</a><br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Non Resident Indian (NRI)</a><br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Company, Partnership, HUF and LLP</a><br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Glossary</a><br />
-            </div>
-            <div className="col-4">
-                <h4 className=''> <i class="fa fa-user" aria-hidden="true">Your Zerodha Account</i> </h4>
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Your Profile</a> <br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Account modification</a><br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Client Master Report (CMR) and Depository Participant (DP)</a> <br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Nomination</a> <br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Transfer and conversion of securities</a> <br /> 
-            </div>
-            <div className="col-4">
-                <h4 className=''> <i class="fa fa-bar-chart" aria-hidden="true">Kite</i> </h4>
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">IPO</a> <br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Trading FAQs</a><br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Margin Trading Facility (MTF) and Margins</a> <br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Charts and orders</a> <br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Alerts and Nudges</a> <br />
-                 <a style={{textDecoration:"none", lineHeight:"2"}} href="">General</a> <br />
-                
-            </div>
-        </div>
+    return (
+        <div className="container my-5">
+            <h1 className="fs-2 text-center mb-5">To create a ticket, select a relevant topic</h1>
 
-         <div className="row p-4 mb-5 mt-5">
-           
-            <div className="col-4">
-                <h4 className=''> <i class="fa fa-credit-card" aria-hidden="true"> Funds</i> </h4>
-                <a  style={{textDecoration:"none", lineHeight:"2"}}  href="">Add money</a> <br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Withdraw money</a><br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Add bank accounts</a><br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">eMandates</a><br />
-               
-            </div>
-            <div className="col-4">
-                <h4 className=''> <i class="fa fa-codiepie" aria-hidden="true">Console</i> </h4>
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Portfolio</a> <br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Corporate actions</a><br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Funds statement</a> <br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Reports</a> <br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Profile</a> <br /> 
-                 <a style={{textDecoration:"none", lineHeight:"2"}} href="">Segments</a> <br /> 
-            </div>
-            <div className="col-4">
-                <h4 className=''> <i class="fa fa-eercast" aria-hidden="true"> Coin</i> </h4>
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Understanding mutual funds and Coin</a> <br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Coin app</a><br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Coin web</a> <br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Charts and orders</a> <br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">Transactions and reports</a> <br />
-                <a style={{textDecoration:"none", lineHeight:"2"}} href="">National Pension Scheme (NPS)</a> <br />
-                
-            </div>
-        </div>
+            {/* First row */}
+            <div className="row g-4 mb-5">
+                <div className="col-12 col-md-4">
+                    <h4>
+                        <i className="fa fa-plus-circle me-2" aria-hidden="true"></i>
+                        Account Opening
+                    </h4>
+                    <div className="d-flex flex-column mt-2">
+                        <a href="#" className="text-decoration-none mb-1">Resident individual</a>
+                        <a href="#" className="text-decoration-none mb-1">Minor</a>
+                        <a href="#" className="text-decoration-none mb-1">Non Resident Indian (NRI)</a>
+                        <a href="#" className="text-decoration-none mb-1">Company, Partnership, HUF and LLP</a>
+                        <a href="#" className="text-decoration-none mb-1">Glossary</a>
+                    </div>
+                </div>
 
+                <div className="col-12 col-md-4">
+                    <h4>
+                        <i className="fa fa-user me-2" aria-hidden="true"></i>
+                        Your Zerodha Account
+                    </h4>
+                    <div className="d-flex flex-column mt-2">
+                        <a href="#" className="text-decoration-none mb-1">Your Profile</a>
+                        <a href="#" className="text-decoration-none mb-1">Account modification</a>
+                        <a href="#" className="text-decoration-none mb-1">Client Master Report (CMR) and DP</a>
+                        <a href="#" className="text-decoration-none mb-1">Nomination</a>
+                        <a href="#" className="text-decoration-none mb-1">Transfer and conversion of securities</a>
+                    </div>
+                </div>
+
+                <div className="col-12 col-md-4">
+                    <h4>
+                        <i className="fa fa-bar-chart me-2" aria-hidden="true"></i>
+                        Kite
+                    </h4>
+                    <div className="d-flex flex-column mt-2">
+                        <a href="#" className="text-decoration-none mb-1">IPO</a>
+                        <a href="#" className="text-decoration-none mb-1">Trading FAQs</a>
+                        <a href="#" className="text-decoration-none mb-1">Margin Trading Facility (MTF) and Margins</a>
+                        <a href="#" className="text-decoration-none mb-1">Charts and orders</a>
+                        <a href="#" className="text-decoration-none mb-1">Alerts and Nudges</a>
+                        <a href="#" className="text-decoration-none mb-1">General</a>
+                    </div>
+                </div>
+            </div>
+
+            {/* Second row */}
+            <div className="row g-4">
+                <div className="col-12 col-md-4">
+                    <h4>
+                        <i className="fa fa-credit-card me-2" aria-hidden="true"></i>
+                        Funds
+                    </h4>
+                    <div className="d-flex flex-column mt-2">
+                        <a href="#" className="text-decoration-none mb-1">Add money</a>
+                        <a href="#" className="text-decoration-none mb-1">Withdraw money</a>
+                        <a href="#" className="text-decoration-none mb-1">Add bank accounts</a>
+                        <a href="#" className="text-decoration-none mb-1">eMandates</a>
+                    </div>
+                </div>
+
+                <div className="col-12 col-md-4">
+                    <h4>
+                        <i className="fa fa-codiepie me-2" aria-hidden="true"></i>
+                        Console
+                    </h4>
+                    <div className="d-flex flex-column mt-2">
+                        <a href="#" className="text-decoration-none mb-1">Portfolio</a>
+                        <a href="#" className="text-decoration-none mb-1">Corporate actions</a>
+                        <a href="#" className="text-decoration-none mb-1">Funds statement</a>
+                        <a href="#" className="text-decoration-none mb-1">Reports</a>
+                        <a href="#" className="text-decoration-none mb-1">Profile</a>
+                        <a href="#" className="text-decoration-none mb-1">Segments</a>
+                    </div>
+                </div>
+
+                <div className="col-12 col-md-4">
+                    <h4>
+                        <i className="fa fa-eercast me-2" aria-hidden="true"></i>
+                        Coin
+                    </h4>
+                    <div className="d-flex flex-column mt-2">
+                        <a href="#" className="text-decoration-none mb-1">Understanding mutual funds and Coin</a>
+                        <a href="#" className="text-decoration-none mb-1">Coin app</a>
+                        <a href="#" className="text-decoration-none mb-1">Coin web</a>
+                        <a href="#" className="text-decoration-none mb-1">Charts and orders</a>
+                        <a href="#" className="text-decoration-none mb-1">Transactions and reports</a>
+                        <a href="#" className="text-decoration-none mb-1">National Pension Scheme (NPS)</a>
+                    </div>
+                </div>
+            </div>
         </div>
-     );
+    );
 }
 
 export default CreateTicket;
