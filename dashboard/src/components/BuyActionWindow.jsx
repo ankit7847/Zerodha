@@ -12,7 +12,7 @@
     const [stockPrice, setStockPrice] = useState(0.0);
 
     const handleBuyClick = () => { 
-      axios.post("http://localhost:3000/newOrder", {
+      axios.post("https://zerodha-backend-401y.onrender.com/newOrder", {
 
         name: uid,
         qty: stockQuantity,
