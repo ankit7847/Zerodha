@@ -23,7 +23,7 @@ const Home = () => {
 
   const token = localStorage.getItem("token");
   if (!token) {
-    window.location.href = "http://localhost:3000/Signup";
+    window.location.href = "https://zerodha-dashboard-1-6b7e.onrender.com/Signup";
 
   }
 }, []);

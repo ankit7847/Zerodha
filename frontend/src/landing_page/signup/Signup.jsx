@@ -18,13 +18,13 @@ function Signup() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:3002/api/auth/register", formData);
+      const res = await axios.post("https://zerodha-backend-401y.onrender.com/api/auth/register", formData);
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("username", res.data.username);
       localStorage.setItem("userid", res.data._id);
 
-      window.location.href = `http://localhost:3000?token=${res.data.token}&username=${res.data.username}&userid=${res.data._id}`;
+      window.location.href = `https://zerodha-dashboard-1-6b7e.onrender.com?token=${res.data.token}&username=${res.data.username}&userid=${res.data._id}`;
     } catch (err) {
       console.log("Error:", err);
       alert(err.response?.data?.message || "Error");

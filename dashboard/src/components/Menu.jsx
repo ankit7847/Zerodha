@@ -24,7 +24,7 @@ const Menu = () => {
   localStorage.removeItem("username");
   localStorage.removeItem("userid");
   
-  window.location.href = "http://localhost:5173";
+  window.location.href = "https://zerodha-frontend-1-evqj.onrender.com";
 
 };
 
