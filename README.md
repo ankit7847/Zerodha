@@ -1,6 +1,6 @@
 # Zerodha Clone – Full Stack Trading Dashboard
 
-A full-stack stock trading dashboard inspired by [Zerodha](https://zerodha.com/), built using the MERN stack. This project demonstrates a real-world financial dashboard experience with equity overview, holdings, profit/loss tracking, and interactive charts.
+A full-stack stock trading dashboard inspire by [Zerodha](https://zerodha.com/), built using the MERN stack. This project demonstrates a real-world financial dashboard experience with equity overview, holdings, profit/loss tracking, and interactive charts.
 
 ## 🔗 Live Demo :- https://zerodha-frontend-1-evqj.onrender.com
 
