@@ -7,7 +7,7 @@ A full-stack stock trading dashboard inspire by [Zerodha](https://zerodha.com/),
 ## ⚙️ Tech Stack
 
 **Frontend:**
-- React.js
+- React.JS
 - HTML, CSS, Bootstrap
 - Chart.js (for Pie and Bar charts)
 
